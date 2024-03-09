@@ -12,20 +12,38 @@ import RealityKitContent
 struct ImmersiveView: View {
     var body: some View {
         RealityView { content in
-            // Add the initial RealityKit content
-            if let immersiveContentEntity = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
-                content.add(immersiveContentEntity)
-
-                // Add an ImageBasedLight for the immersive content
-                guard let resource = try? await EnvironmentResource(named: "ImageBasedLight") else { return }
-                let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 0.25)
-                immersiveContentEntity.components.set(iblComponent)
-                immersiveContentEntity.components.set(ImageBasedLightReceiverComponent(imageBasedLight: immersiveContentEntity))
-
-                // Put skybox here.  See example in World project available at
-                // https://developer.apple.com/
+            //Skybox Entity
+            guard let skyBoxEntity = createSkyBox() else {
+                print("Error Loading Skybox Entity") 
+                return
             }
+            //add to RealityView
+            content.add(skyBoxEntity)
         }
+        
+        
+    }
+    
+    private func createSkyBox () -> Entity? {
+        //Mesh
+        let largeSphere = MeshResource.generateSphere(radius: 1000)
+        //Material
+        var skyBoxMaterial = UnlitMaterial()
+        do {
+            let texture = try TextureResource.load(named: "StarryNight")
+            skyBoxMaterial.color = .init(texture: .init(texture))
+        }catch {
+            print("Error Loading Texture: \(error)")
+        }
+        
+        //Skybox Entity
+        let skyboxEntity = Entity()
+        skyboxEntity.components.set(
+            ModelComponent(mesh: largeSphere,
+                           materials: [skyBoxMaterial])
+        )
+        skyboxEntity.scale *= .init(x: -1, y: 1, z: 1)//insert entity
+        return skyboxEntity
     }
 }
 
