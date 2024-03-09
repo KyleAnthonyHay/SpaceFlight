@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		85B710BA2B9CF583009BFDD3 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 85B710B92B9CF583009BFDD3 /* RealityKitContent */; };
 		85B710BC2B9CF583009BFDD3 /* SpaceFlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B710BB2B9CF583009BFDD3 /* SpaceFlightApp.swift */; };
-		85B710BE2B9CF583009BFDD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B710BD2B9CF583009BFDD3 /* ContentView.swift */; };
+		85B710BE2B9CF583009BFDD3 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B710BD2B9CF583009BFDD3 /* ControlView.swift */; };
 		85B710C02B9CF583009BFDD3 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B710BF2B9CF583009BFDD3 /* ImmersiveView.swift */; };
 		85B710C22B9CF583009BFDD3 /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 85B710C12B9CF583009BFDD3 /* ImageBasedLighting.skybox */; };
 		85B710C42B9CF584009BFDD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B710C32B9CF584009BFDD3 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		85B710B42B9CF583009BFDD3 /* SpaceFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B710B82B9CF583009BFDD3 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		85B710BB2B9CF583009BFDD3 /* SpaceFlightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceFlightApp.swift; sourceTree = "<group>"; };
-		85B710BD2B9CF583009BFDD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85B710BD2B9CF583009BFDD3 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		85B710BF2B9CF583009BFDD3 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		85B710C12B9CF583009BFDD3 /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
 		85B710C32B9CF584009BFDD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				85B710BB2B9CF583009BFDD3 /* SpaceFlightApp.swift */,
-				85B710BD2B9CF583009BFDD3 /* ContentView.swift */,
+				85B710BD2B9CF583009BFDD3 /* ControlView.swift */,
 				85B710BF2B9CF583009BFDD3 /* ImmersiveView.swift */,
 				85B710C12B9CF583009BFDD3 /* ImageBasedLighting.skybox */,
 				85B710C32B9CF584009BFDD3 /* Assets.xcassets */,
@@ -161,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85B710BE2B9CF583009BFDD3 /* ContentView.swift in Sources */,
+				85B710BE2B9CF583009BFDD3 /* ControlView.swift in Sources */,
 				85B710BC2B9CF583009BFDD3 /* SpaceFlightApp.swift in Sources */,
 				85B710C02B9CF583009BFDD3 /* ImmersiveView.swift in Sources */,
 			);
