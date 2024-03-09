@@ -23,8 +23,8 @@ def Xform "Root"
     )
     {
         quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 1.8, 0.5)
+        float3 xformOp:scale = (300, 300, 300)
+        float3 xformOp:translate = (-41.605022, -16.407871, -39.807316)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }
