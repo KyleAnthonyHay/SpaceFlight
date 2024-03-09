@@ -17,8 +17,10 @@ struct ImmersiveView: View {
                 print("Error Loading Skybox Entity") 
                 return
             }
+            let earthEntity = await createEarthModel()
             //add to RealityView
             content.add(skyBoxEntity)
+            content.add(earthEntity)
         }
         
         
@@ -44,6 +46,12 @@ struct ImmersiveView: View {
         )
         skyboxEntity.scale *= .init(x: -1, y: 1, z: 1)//insert entity
         return skyboxEntity
+    }
+    private func createEarthModel() async -> Entity {
+        guard let entity = try? await Entity(named: "Scene", in: realityKitContentBundle) else {
+            fatalError("Cannot Load model")
+        }
+        return entity
     }
 }
 
